@@ -10,7 +10,7 @@ The code is organized as follows:
 
 - The simulation folder contains scripts for running example simulations. The results are written to files in the jld2 format.
 
-- The data folder contains data corresponding to each simulation, i.e. the output of the simulation scripts have been moved to the data folder.
+- The data folder contains data corresponding to each simulation, i.e. the output of the simulation scripts have been moved to the data folder. Note that the sample files in the data folder are coarse grained to 10 data points to avoid large files on GitHub, while the figures correspond to 1000 data points. To recreate the figures, one can run the simulations and save the data with 1000 data points (this is controlled with the last parameter in the `coarse_grain_state`-function). 
 
 - The analysis folder contains notebooks where the simulation data is analyzed and plots similar to the figures in the preprint can be produced. 
 

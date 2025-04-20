@@ -1,0 +1,861 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     28875,        853]
+NotebookOptionsPosition[     26071,        800]
+NotebookOutlinePosition[     26465,        816]
+CellTagsIndexPosition[     26422,        813]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{"We", " ", "calculate", " ", "the", " ", "ratio", " ", "of", " ", 
+  "expectation", " ", "values", " ", "as"}], "\n", 
+ RowBox[{
+  RowBox[{
+   FormBox[
+    TemplateBox[<|"boxes" -> FormBox[
+        RowBox[{
+          FractionBox[
+           RowBox[{
+             SubscriptBox["\[Null]", 
+              StyleBox["L", "TI"]], 
+             SubscriptBox[
+              RowBox[{"\[LeftAngleBracket]", 
+                RowBox[{"0|", 
+                  SuperscriptBox[
+                   OverscriptBox[
+                    StyleBox["n", "TI"], "^"], 
+                   StyleBox["p", "TI"]], "|0"}], "\[RightAngleBracket]"}], 
+              StyleBox["L", "TI"]]}], 
+           RowBox[{
+             SubscriptBox["\[Null]", 
+              StyleBox["L", "TI"]], 
+             SubscriptBox[
+              RowBox[{"\[LeftAngleBracket]", 
+                RowBox[{"1|", 
+                  SuperscriptBox[
+                   OverscriptBox[
+                    StyleBox["n", "TI"], "^"], 
+                   StyleBox["p", "TI"]], "|1"}], "\[RightAngleBracket]"}], 
+              StyleBox["L", "TI"]]}]], "\[LongEqual]", 
+          FractionBox[
+           RowBox[{
+             SubscriptBox[
+              StyleBox["N", "TI"], "-"], "(", 
+             RowBox[{
+               RowBox[{"\[LeftAngleBracket]", 
+                 SuperscriptBox[
+                  OverscriptBox[
+                   StyleBox["n", "TI"], "^"], 
+                  StyleBox["p", "TI"]], "\[RightAngleBracket]"}], "+", 
+               SubscriptBox[
+                StyleBox["S", "TI"], 
+                RowBox[{
+                  SuperscriptBox[
+                   StyleBox["n", "TI"], 
+                   StyleBox["p", "TI"]], "\[PlusMinus]"}]]}], ")"}], 
+           RowBox[{
+             SubscriptBox[
+              StyleBox["N", "TI"], "+"], "(", 
+             RowBox[{
+               RowBox[{"\[LeftAngleBracket]", 
+                 SuperscriptBox[
+                  OverscriptBox[
+                   StyleBox["n", "TI"], "^"], 
+                  StyleBox["p", "TI"]], "\[RightAngleBracket]"}], "-", 
+               SubscriptBox[
+                StyleBox["S", "TI"], 
+                RowBox[{
+                  SuperscriptBox[
+                   StyleBox["n", "TI"], 
+                   StyleBox["p", "TI"]], "\[PlusMinus]"}]]}], ")"}]]}], 
+        TraditionalForm], "errors" -> {}, "input" -> 
+      "\\frac{_L \\langle 0|\\hat{n}^p| 0 \\rangle _L}{ _L \\langle 1| \
+\\hat{n}^p| 1 \\rangle _L} = \\frac{\\mathcal{N}_-(\\langle\\hat{n}^p \
+\\rangle + S_{n^p \\pm})}{\\mathcal{N}_+(\\langle\\hat{n}^p\\rangle - S_{n^p \
+\\pm})}", "state" -> "Boxes"|>,
+     "TeXAssistantTemplate"],
+    TraditionalForm], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "where"}], " "}], "\n", 
+ RowBox[{
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox[
+          StyleBox["N", "TI"], "\[PlusMinus]"], "\[LongEqual]", "2", 
+         RowBox[{"(", 
+           RowBox[{"1", "\[PlusMinus]", 
+             SuperscriptBox["cosh", 
+              RowBox[{"-1", "/", "2"}]], 
+             RowBox[{"(", 
+               RowBox[{"2", 
+                 StyleBox["r", "TI"]}], ")"}]}], ")"}]}], TraditionalForm], 
+     "errors" -> {}, "input" -> 
+     "N_{\\pm} = 2(1 \\pm \\text{cosh}^{-1/2}(2r))", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"],
+   TraditionalForm], ",", "\n", 
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox[
+          StyleBox["S", "TI"], 
+          RowBox[{
+            SuperscriptBox[
+             StyleBox["n", "TI"], 
+             StyleBox["p", "TI"]], "\[PlusMinus]"}]], "\[LongEqual]", 
+         RowBox[{"\[LeftAngleBracket]", 
+           RowBox[{"0|", 
+             SuperscriptBox[
+              StyleBox["S", "TI"], "\[Dagger]"], 
+             RowBox[{"(", "\[PlusMinus]\[Xi]", ")"}], 
+             SuperscriptBox[
+              OverscriptBox[
+               StyleBox["n", "TI"], "^"], 
+              StyleBox["p", "TI"]], 
+             StyleBox["S", "TI"], 
+             RowBox[{"(", "\[MinusPlus]\[Xi]", ")"}], "|0"}], 
+           "\[RightAngleBracket]"}], "\[LongEqual]", 
+         FractionBox["1", 
+          RowBox[{"cosh", 
+            StyleBox["r", "TI"]}]], 
+         UnderoverscriptBox["\[Sum]", 
+          RowBox[{
+            StyleBox["n", "TI"], "\[LongEqual]", "0"}], "\[Infinity]", 
+          LimitsPositioning -> True], 
+         SuperscriptBox[
+          RowBox[{"(", "-1", ")"}], 
+          StyleBox["n", "TI"]], 
+         FractionBox[
+          RowBox[{
+            RowBox[{"(", 
+              RowBox[{"2", 
+                StyleBox["n", "TI"]}], ")"}], "!"}], 
+          SuperscriptBox[
+           RowBox[{"(", 
+             RowBox[{
+               SuperscriptBox["2", 
+                StyleBox["n", "TI"]], 
+               StyleBox["n", "TI"], "!"}], ")"}], "2"]], 
+         SuperscriptBox[
+          RowBox[{"(", 
+            RowBox[{"2", 
+              StyleBox["n", "TI"]}], ")"}], 
+          StyleBox["p", "TI"]], 
+         SuperscriptBox[" tanh", 
+          RowBox[{"2", 
+            StyleBox["n", "TI"]}]], 
+         StyleBox["r", "TI"]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "S_{n^p \\pm} = \\langle 0 | S^\\dagger (\\pm \\xi) \\hat{n}^p S(\\mp \
+\\xi) | 0 \\rangle =  \\frac{1}{\\text{cosh}r}\\sum_{n=0}^{\\infty}(-1)^n \
+\\frac{(2n)!}{(2^n n!)^2} (2n)^p \\text{ tanh}^{2n} r", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"],
+   TraditionalForm], ",", "\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     FormBox[
+      TemplateBox[<|"boxes" -> FormBox[
+          RowBox[{
+            RowBox[{"\[LeftAngleBracket]", 
+              SuperscriptBox[
+               OverscriptBox[
+                StyleBox["n", "TI"], "^"], 
+               StyleBox["p", "TI"]], "\[RightAngleBracket]"}], "\[LongEqual]", 
+            RowBox[{"\[LeftAngleBracket]", 
+              RowBox[{"0|", 
+                SuperscriptBox[
+                 StyleBox["S", "TI"], "\[Dagger]"], 
+                RowBox[{"(", "\[PlusMinus]\[Xi]", ")"}], 
+                SuperscriptBox[
+                 OverscriptBox[
+                  StyleBox["n", "TI"], "^"], 
+                 StyleBox["p", "TI"]], 
+                StyleBox["S", "TI"], 
+                RowBox[{"(", "\[PlusMinus]\[Xi]", ")"}], "|0"}], 
+              "\[RightAngleBracket]"}], "\[LongEqual]", 
+            FractionBox["1", 
+             RowBox[{"cosh", 
+               StyleBox["r", "TI"]}]], 
+            UnderoverscriptBox["\[Sum]", 
+             RowBox[{
+               StyleBox["n", "TI"], "\[LongEqual]", "0"}], "\[Infinity]", 
+             LimitsPositioning -> True], 
+            FractionBox[
+             RowBox[{
+               RowBox[{"(", 
+                 RowBox[{"2", 
+                   StyleBox["n", "TI"]}], ")"}], "!"}], 
+             SuperscriptBox[
+              RowBox[{"(", 
+                RowBox[{
+                  SuperscriptBox["2", 
+                   StyleBox["n", "TI"]], 
+                  StyleBox["n", "TI"], "!"}], ")"}], "2"]], 
+            SuperscriptBox[
+             RowBox[{"(", 
+               RowBox[{"2", 
+                 StyleBox["n", "TI"]}], ")"}], 
+             StyleBox["p", "TI"]], 
+            SuperscriptBox[" tanh", 
+             RowBox[{"2", 
+               StyleBox["n", "TI"]}]], 
+            StyleBox["r", "TI"]}], TraditionalForm], "errors" -> {}, "input" -> 
+        "\\langle \\hat{n}^p \\rangle =  \\langle 0 | S^\\dagger (\\pm \\xi) \
+\\hat{n}^p S(\\pm \\xi) | 0 \\rangle  = \\frac{1}{\\text{cosh}r}\\sum_{n=0}^{\
+\\infty} \\frac{(2n)!}{(2^n n!)^2} (2n)^p \\text{ tanh}^{2n} r", "state" -> 
+        "Boxes"|>,
+       "TeXAssistantTemplate"],
+      TraditionalForm], ".", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     "There"}], " ", "is", " ", "a", " ", "factor", " ", 
+    TemplateBox[<|"boxes" -> FormBox[
+        RowBox[{"2", 
+          SuperscriptBox["cosh", "-1"], 
+          StyleBox["r", "TI"]}], TraditionalForm], "errors" -> {}, "input" -> 
+      "2 \\text{cosh}^{-1} r", "state" -> "Boxes"|>,
+     "TeXAssistantTemplate"], "  ", "that", " ", "cancels", " ", "from", " ", 
+    "the", " ", 
+    RowBox[{"ratio", ".", " ", "We"}], " ", "calculate", " ", "the", " ", 
+    "different", " ", "sums", " ", "for", " ", 
+    FormBox[
+     TemplateBox[<|"boxes" -> FormBox[
+         RowBox[{
+           StyleBox["p", "TI"], "\[Element]", 
+           RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}]}], 
+         TraditionalForm], "errors" -> {}, "input" -> 
+       "p \\in \\{1, 2, 3 , 4\\}", "state" -> "Boxes"|>,
+      "TeXAssistantTemplate"],
+     TraditionalForm]}], ":", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   FormBox[
+    TemplateBox[<|"boxes" -> FormBox[
+        RowBox[{
+          StyleBox["p", "TI"], "\[LongEqual]", "1"}], TraditionalForm], 
+      "errors" -> {}, "input" -> "p = 1", "state" -> "Boxes"|>,
+     "TeXAssistantTemplate"],
+    TraditionalForm], ":", "\n", "\n", 
+   FormBox[
+    TemplateBox[<|"boxes" -> FormBox[
+        RowBox[{
+          SubscriptBox[
+           StyleBox["S", "TI"], 
+           RowBox[{
+             StyleBox["n", "TI"], "\[PlusMinus]"}]], ":"}], TraditionalForm], 
+      "errors" -> {}, "input" -> "S_{n \\pm}:", "state" -> "Boxes"|>,
+     "TeXAssistantTemplate"],
+    TraditionalForm]}]}]}], "Text",
+ CellChangeTimes->{{3.954144538870336*^9, 3.954144562080875*^9}, {
+  3.9541446182714443`*^9, 
+  3.9541447510969667`*^9}},ExpressionUUID->"f50e7bf6-4765-4498-a9c9-\
+06549a1ea833"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Sum", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"-", "1"}], ")"}], "^", "n"}], " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"2", "n"}], ")"}], "!"}], "/", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", "^", "n"}], " ", 
+        RowBox[{"n", "!"}]}], ")"}], "^", "2"}]}], " ", 
+    RowBox[{"(", 
+     RowBox[{"2", "n"}], ")"}], 
+    RowBox[{
+     RowBox[{"Tanh", "[", "r", "]"}], "^", 
+     RowBox[{"(", 
+      RowBox[{"2", "n"}], ")"}]}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", " ", "0", ",", " ", "Infinity"}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{3.954144812390223*^9},
+ CellLabel->"In[26]:=",ExpressionUUID->"f9e0ee99-09d8-4c18-807c-fdb8eb2e4523"],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox[
+   SuperscriptBox[
+    RowBox[{"Tanh", "[", "r", "]"}], "2"], 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      SuperscriptBox[
+       RowBox[{"Tanh", "[", "r", "]"}], "2"]}], ")"}], 
+    RowBox[{"3", "/", "2"}]]]}]], "Output",
+ CellChangeTimes->{3.9541448221824293`*^9},
+ CellLabel->"Out[26]=",ExpressionUUID->"aac601dd-572c-4739-a372-3456c370930c"]
+}, Open  ]],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{"\[LeftAngleBracket]", 
+         OverscriptBox[
+          StyleBox["n", "TI"], "^"], "\[RightAngleBracket]"}], 
+       TraditionalForm], "errors" -> {}, "input" -> 
+     "\\langle \\hat{n}\\rangle", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "c5bf9255-998f-473b-8fe7-03af60d5b22d"],
+ ":"
+}], "Text",
+ CellChangeTimes->{
+  3.9541448265484*^9},ExpressionUUID->"b8f9d948-5445-4cc6-a331-b76f0cc1bcff"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Sum", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"2", "n"}], ")"}], "!"}], "/", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", "^", "n"}], " ", 
+        RowBox[{"n", "!"}]}], ")"}], "^", "2"}]}], " ", 
+    RowBox[{"(", 
+     RowBox[{"2", "n"}], ")"}], 
+    RowBox[{
+     RowBox[{"Tanh", "[", "r", "]"}], "^", 
+     RowBox[{"(", 
+      RowBox[{"2", "n"}], ")"}]}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", " ", "0", ",", " ", "Infinity"}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{3.954144835229988*^9},
+ CellLabel->"In[27]:=",ExpressionUUID->"a3d487ff-b961-4e72-9fab-38b1b6179213"],
+
+Cell[BoxData[
+ FractionBox[
+  SuperscriptBox[
+   RowBox[{"Tanh", "[", "r", "]"}], "2"], 
+  SuperscriptBox[
+   RowBox[{"(", 
+    SuperscriptBox[
+     RowBox[{"Sech", "[", "r", "]"}], "2"], ")"}], 
+   RowBox[{"3", "/", "2"}]]]], "Output",
+ CellChangeTimes->{3.954144836608234*^9},
+ CellLabel->"Out[27]=",ExpressionUUID->"a63099a8-5ac0-447b-9003-0afad89a1926"]
+}, Open  ]],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    TemplateBox[<|"boxes" -> FormBox[
+        RowBox[{
+          StyleBox["p", "TI"], "\[LongEqual]", "2"}], TraditionalForm], 
+      "errors" -> {}, "input" -> "p = 2", "state" -> "Boxes"|>,
+     "TeXAssistantTemplate"], ":"}], TraditionalForm]],ExpressionUUID->
+  "33de6d79-a981-4e02-a716-4fea3b67cd3b"],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox[
+          StyleBox["S", "TI"], 
+          RowBox[{
+            SuperscriptBox[
+             StyleBox["n", "TI"], "2"], "\[PlusMinus]"}]], ":"}], 
+       TraditionalForm], "errors" -> {}, "input" -> "S_{n^2 \\pm}:", "state" -> 
+     "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],
+  CellChangeTimes->{{3.954144538870336*^9, 3.954144562080875*^9}, {
+   3.9541446182714443`*^9, 3.9541447510969667`*^9}},ExpressionUUID->
+  "9e15c677-2cd0-4e9f-bb57-8c61d57ffa5f"]
+}], "Text",
+ CellChangeTimes->{{3.95414484421883*^9, 
+  3.9541448781438427`*^9}},ExpressionUUID->"fec11d54-418b-4a67-9b20-\
+b743c2ad036a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Sum", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"-", "1"}], ")"}], "^", "n"}], " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"2", "n"}], ")"}], "!"}], "/", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", "^", "n"}], " ", 
+        RowBox[{"n", "!"}]}], ")"}], "^", "2"}]}], " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"2", "n"}], ")"}], "^", "2"}], 
+    RowBox[{
+     RowBox[{"Tanh", "[", "r", "]"}], "^", 
+     RowBox[{"(", 
+      RowBox[{"2", "n"}], ")"}]}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", " ", "0", ",", " ", "Infinity"}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{3.954144875874297*^9},
+ CellLabel->"In[28]:=",ExpressionUUID->"2f228047-aac0-4288-8a45-4a646293e410"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"Tanh", "[", "r", "]"}], "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "2"}], "+", 
+     SuperscriptBox[
+      RowBox[{"Tanh", "[", "r", "]"}], "2"]}], ")"}]}], 
+  SuperscriptBox[
+   RowBox[{"(", 
+    RowBox[{"1", "+", 
+     SuperscriptBox[
+      RowBox[{"Tanh", "[", "r", "]"}], "2"]}], ")"}], 
+   RowBox[{"5", "/", "2"}]]]], "Output",
+ CellChangeTimes->{3.9541448814058237`*^9},
+ CellLabel->"Out[28]=",ExpressionUUID->"470ab3e5-4a90-4531-b9e2-0348f2e963e3"]
+}, Open  ]],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{"\[LeftAngleBracket]", 
+         SuperscriptBox[
+          OverscriptBox[
+           StyleBox["n", "TI"], "^"], "2"], "\[RightAngleBracket]"}], 
+       TraditionalForm], "errors" -> {}, "input" -> 
+     "\\langle \\hat{n}^2\\rangle", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "e7ba4558-0f93-4f22-95e8-d517f9122b3b"],
+ ":"
+}], "Text",
+ CellChangeTimes->{{3.954144898770108*^9, 
+  3.9541449154747143`*^9}},ExpressionUUID->"560d9c0f-78ab-4aad-802f-\
+74daace67a3d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Sum", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"2", "n"}], ")"}], "!"}], "/", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", "^", "n"}], " ", 
+        RowBox[{"n", "!"}]}], ")"}], "^", "2"}]}], " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"2", "n"}], ")"}], "^", "2"}], 
+    RowBox[{
+     RowBox[{"Tanh", "[", "r", "]"}], "^", 
+     RowBox[{"(", 
+      RowBox[{"2", "n"}], ")"}]}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", " ", "0", ",", " ", "Infinity"}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{3.9541449184604177`*^9},
+ CellLabel->"In[29]:=",ExpressionUUID->"cd1d25af-cfe4-4371-838a-0511b8a3feae"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"Sinh", "[", "r", "]"}], "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{"2", "+", 
+     SuperscriptBox[
+      RowBox[{"Tanh", "[", "r", "]"}], "2"]}], ")"}]}], 
+  SuperscriptBox[
+   RowBox[{"(", 
+    SuperscriptBox[
+     RowBox[{"Sech", "[", "r", "]"}], "2"], ")"}], 
+   RowBox[{"3", "/", "2"}]]]], "Output",
+ CellChangeTimes->{3.9541449203488398`*^9},
+ CellLabel->"Out[29]=",ExpressionUUID->"e43e4c48-9582-4999-a0d1-9aa4a7bd5b09"]
+}, Open  ]],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    TemplateBox[<|"boxes" -> FormBox[
+        RowBox[{
+          StyleBox["p", "TI"], "\[LongEqual]", "3"}], TraditionalForm], 
+      "errors" -> {}, "input" -> "p = 3", "state" -> "Boxes"|>,
+     "TeXAssistantTemplate"], ":"}], TraditionalForm]],ExpressionUUID->
+  "512f717f-aa31-4903-bc6b-a8d9bdaab6fb"],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox[
+          StyleBox["S", "TI"], 
+          RowBox[{
+            SuperscriptBox[
+             StyleBox["n", "TI"], "3"], "\[PlusMinus]"}]], ":"}], 
+       TraditionalForm], "errors" -> {}, "input" -> "S_{n^3 \\pm}:", "state" -> 
+     "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],
+  CellChangeTimes->{{3.954144538870336*^9, 3.954144562080875*^9}, {
+   3.9541446182714443`*^9, 3.9541447510969667`*^9}},ExpressionUUID->
+  "90b94f07-5667-4cc0-ac1b-d4a3bc721146"]
+}], "Text",
+ CellChangeTimes->{{3.954144929531876*^9, 
+  3.9541449521823187`*^9}},ExpressionUUID->"f49bad3b-40ae-41da-8d60-\
+766b564e3247"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Sum", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"-", "1"}], ")"}], "^", "n"}], " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"2", "n"}], ")"}], "!"}], "/", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", "^", "n"}], " ", 
+        RowBox[{"n", "!"}]}], ")"}], "^", "2"}]}], " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"2", "n"}], ")"}], "^", "3"}], 
+    RowBox[{
+     RowBox[{"Tanh", "[", "r", "]"}], "^", 
+     RowBox[{"(", 
+      RowBox[{"2", "n"}], ")"}]}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", " ", "0", ",", " ", "Infinity"}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{3.954144955549629*^9},
+ CellLabel->"In[30]:=",ExpressionUUID->"06aa997f-8184-4589-af3f-cec46d5cb303"],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox[
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"Tanh", "[", "r", "]"}], "2"], " ", 
+    RowBox[{"(", 
+     RowBox[{"4", "-", 
+      RowBox[{"10", " ", 
+       SuperscriptBox[
+        RowBox[{"Tanh", "[", "r", "]"}], "2"]}], "+", 
+      SuperscriptBox[
+       RowBox[{"Tanh", "[", "r", "]"}], "4"]}], ")"}]}], 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      SuperscriptBox[
+       RowBox[{"Tanh", "[", "r", "]"}], "2"]}], ")"}], 
+    RowBox[{"7", "/", "2"}]]]}]], "Output",
+ CellChangeTimes->{3.9541449569823713`*^9},
+ CellLabel->"Out[30]=",ExpressionUUID->"8d23f258-22b7-489a-ac7a-911ea96a45bb"]
+}, Open  ]],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{"\[LeftAngleBracket]", 
+         SuperscriptBox[
+          OverscriptBox[
+           StyleBox["n", "TI"], "^"], "3"], "\[RightAngleBracket]"}], 
+       TraditionalForm], "errors" -> {}, "input" -> 
+     "\\langle \\hat{n}^3\\rangle", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "fcd288d8-db9f-4101-8c34-e884d17a8b11"],
+ ":"
+}], "Text",
+ CellChangeTimes->{
+  3.9541449721819153`*^9},ExpressionUUID->"766b046e-eccd-43a1-bf80-\
+20f96fafb9c8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Sum", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"2", "n"}], ")"}], "!"}], "/", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", "^", "n"}], " ", 
+        RowBox[{"n", "!"}]}], ")"}], "^", "2"}]}], " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"2", "n"}], ")"}], "^", "3"}], 
+    RowBox[{
+     RowBox[{"Tanh", "[", "r", "]"}], "^", 
+     RowBox[{"(", 
+      RowBox[{"2", "n"}], ")"}]}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", " ", "0", ",", " ", "Infinity"}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{3.954144986355641*^9},
+ CellLabel->"In[31]:=",ExpressionUUID->"b7021106-4344-464b-beaf-b887e82c54b1"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"Cosh", "[", "r", "]"}], "4"], " ", 
+   SuperscriptBox[
+    RowBox[{"Sinh", "[", "r", "]"}], "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{"4", "+", 
+     RowBox[{"10", " ", 
+      SuperscriptBox[
+       RowBox[{"Tanh", "[", "r", "]"}], "2"]}], "+", 
+     SuperscriptBox[
+      RowBox[{"Tanh", "[", "r", "]"}], "4"]}], ")"}]}], 
+  SqrtBox[
+   SuperscriptBox[
+    RowBox[{"Sech", "[", "r", "]"}], "2"]]]], "Output",
+ CellChangeTimes->{3.954144987657508*^9},
+ CellLabel->"Out[31]=",ExpressionUUID->"4f09b8c0-3c31-4e12-8dcf-0dc92c1af1e0"]
+}, Open  ]],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         StyleBox["p", "TI"], "\[LongEqual]", "4", ":"}], TraditionalForm], 
+     "errors" -> {}, "input" -> "p = 4:", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "a7c5f2b6-7131-4131-ad4f-3bbed8d600e3"],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox[
+          StyleBox["S", "TI"], 
+          RowBox[{
+            SuperscriptBox[
+             StyleBox["n", "TI"], "4"], "\[PlusMinus]"}]], ":"}], 
+       TraditionalForm], "errors" -> {}, "input" -> "S_{n^4 \\pm}:", "state" -> 
+     "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],
+  CellChangeTimes->{{3.954144538870336*^9, 3.954144562080875*^9}, {
+   3.9541446182714443`*^9, 3.9541447510969667`*^9}},ExpressionUUID->
+  "bddfb48b-2227-43b6-b54c-a3fcba4375ab"]
+}], "Text",
+ CellChangeTimes->{{3.954144995186759*^9, 
+  3.95414500098759*^9}},ExpressionUUID->"5280a816-cdd8-4794-9dfe-\
+b5c98c1802b7"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Sum", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"-", "1"}], ")"}], "^", "n"}], " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"2", "n"}], ")"}], "!"}], "/", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", "^", "n"}], " ", 
+        RowBox[{"n", "!"}]}], ")"}], "^", "2"}]}], " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"2", "n"}], ")"}], "^", "4"}], 
+    RowBox[{
+     RowBox[{"Tanh", "[", "r", "]"}], "^", 
+     RowBox[{"(", 
+      RowBox[{"2", "n"}], ")"}]}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", " ", "0", ",", " ", "Infinity"}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{3.954145018791254*^9},
+ CellLabel->"In[32]:=",ExpressionUUID->"321fade0-453f-47b7-8ac7-25fab69ccaaa"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "8"}], " ", 
+  RowBox[{"HypergeometricPFQ", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      FractionBox["3", "2"], ",", "2", ",", "2", ",", "2"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "1", ",", "1"}], "}"}], ",", 
+    RowBox[{"-", 
+     SuperscriptBox[
+      RowBox[{"Tanh", "[", "r", "]"}], "2"]}]}], "]"}], " ", 
+  SuperscriptBox[
+   RowBox[{"Tanh", "[", "r", "]"}], "2"]}]], "Output",
+ CellChangeTimes->{3.954145021644799*^9},
+ CellLabel->"Out[32]=",ExpressionUUID->"b68ea040-957e-44c3-a9f4-a97d29c87f44"]
+}, Open  ]],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{"\[LeftAngleBracket]", 
+         SuperscriptBox[
+          OverscriptBox[
+           StyleBox["n", "TI"], "^"], "4"], "\[RightAngleBracket]"}], 
+       TraditionalForm], "errors" -> {}, "input" -> 
+     "\\langle \\hat{n}^4\\rangle", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], ":"}], TraditionalForm]], "Text",
+ CellChangeTimes->{{3.9541450379715137`*^9, 
+  3.954145052157896*^9}},ExpressionUUID->"30b116cf-e6a1-4d5d-9604-\
+48ca99adb761"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Sum", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"2", "n"}], ")"}], "!"}], "/", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", "^", "n"}], " ", 
+        RowBox[{"n", "!"}]}], ")"}], "^", "2"}]}], " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"2", "n"}], ")"}], "^", "4"}], 
+    RowBox[{
+     RowBox[{"Tanh", "[", "r", "]"}], "^", 
+     RowBox[{"(", 
+      RowBox[{"2", "n"}], ")"}]}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", " ", "0", ",", " ", "Infinity"}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{3.954145069214731*^9},
+ CellLabel->"In[33]:=",ExpressionUUID->"a9daa566-ccd8-4fb3-a2bb-c357a090e4cb"],
+
+Cell[BoxData[
+ RowBox[{"8", " ", 
+  RowBox[{"HypergeometricPFQ", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      FractionBox["3", "2"], ",", "2", ",", "2", ",", "2"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "1", ",", "1"}], "}"}], ",", 
+    SuperscriptBox[
+     RowBox[{"Tanh", "[", "r", "]"}], "2"]}], "]"}], " ", 
+  SuperscriptBox[
+   RowBox[{"Tanh", "[", "r", "]"}], "2"]}]], "Output",
+ CellChangeTimes->{3.95414507110576*^9},
+ CellLabel->"Out[33]=",ExpressionUUID->"a5c5e739-14cf-40b1-afe3-a3ecf98b00ff"]
+}, Open  ]]
+},
+WindowSize->{1288, 887},
+WindowMargins->{{12, Automatic}, {Automatic, 24}},
+FrontEndVersion->"14.1 for Mac OS X x86 (64-bit) (July 16, 2024)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"0726a09f-16ab-44bf-a241-db8fc1681096"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[554, 20, 9473, 239, 401, "Text",ExpressionUUID->"f50e7bf6-4765-4498-a9c9-06549a1ea833"],
+Cell[CellGroupData[{
+Cell[10052, 263, 779, 26, 29, "Input",ExpressionUUID->"f9e0ee99-09d8-4c18-807c-fdb8eb2e4523"],
+Cell[10834, 291, 412, 12, 55, "Output",ExpressionUUID->"aac601dd-572c-4739-a372-3456c370930c"]
+}, Open  ]],
+Cell[11261, 306, 536, 14, 33, "Text",ExpressionUUID->"b8f9d948-5445-4cc6-a331-b76f0cc1bcff"],
+Cell[CellGroupData[{
+Cell[11822, 324, 696, 23, 29, "Input",ExpressionUUID->"a3d487ff-b961-4e72-9fab-38b1b6179213"],
+Cell[12521, 349, 357, 10, 55, "Output",ExpressionUUID->"a63099a8-5ac0-447b-9003-0afad89a1926"]
+}, Open  ]],
+Cell[12893, 362, 1080, 29, 74, "Text",ExpressionUUID->"fec11d54-418b-4a67-9b20-b743c2ad036a"],
+Cell[CellGroupData[{
+Cell[13998, 395, 806, 27, 29, "Input",ExpressionUUID->"2f228047-aac0-4288-8a45-4a646293e410"],
+Cell[14807, 424, 543, 17, 56, "Output",ExpressionUUID->"470ab3e5-4a90-4531-b9e2-0348f2e963e3"]
+}, Open  ]],
+Cell[15365, 444, 601, 16, 33, "Text",ExpressionUUID->"560d9c0f-78ab-4aad-802f-74daace67a3d"],
+Cell[CellGroupData[{
+Cell[15991, 464, 725, 24, 29, "Input",ExpressionUUID->"cd1d25af-cfe4-4371-838a-0511b8a3feae"],
+Cell[16719, 490, 495, 15, 56, "Output",ExpressionUUID->"e43e4c48-9582-4999-a0d1-9aa4a7bd5b09"]
+}, Open  ]],
+Cell[17229, 508, 1081, 29, 74, "Text",ExpressionUUID->"f49bad3b-40ae-41da-8d60-766b564e3247"],
+Cell[CellGroupData[{
+Cell[18335, 541, 806, 27, 29, "Input",ExpressionUUID->"06aa997f-8184-4589-af3f-cec46d5cb303"],
+Cell[19144, 570, 657, 20, 56, "Output",ExpressionUUID->"8d23f258-22b7-489a-ac7a-911ea96a45bb"]
+}, Open  ]],
+Cell[19816, 593, 577, 16, 33, "Text",ExpressionUUID->"766b046e-eccd-43a1-bf80-20f96fafb9c8"],
+Cell[CellGroupData[{
+Cell[20418, 613, 723, 24, 29, "Input",ExpressionUUID->"b7021106-4344-464b-beaf-b887e82c54b1"],
+Cell[21144, 639, 600, 18, 57, "Output",ExpressionUUID->"4f09b8c0-3c31-4e12-8dcf-0dc92c1af1e0"]
+}, Open  ]],
+Cell[21759, 660, 1060, 28, 74, "Text",ExpressionUUID->"5280a816-cdd8-4794-9dfe-b5c98c1802b7"],
+Cell[CellGroupData[{
+Cell[22844, 692, 806, 27, 29, "Input",ExpressionUUID->"321fade0-453f-47b7-8ac7-25fab69ccaaa"],
+Cell[23653, 721, 572, 16, 46, "Output",ExpressionUUID->"b68ea040-957e-44c3-a9f4-a97d29c87f44"]
+}, Open  ]],
+Cell[24240, 740, 533, 13, 33, "Text",ExpressionUUID->"30b116cf-e6a1-4d5d-9604-48ca99adb761"],
+Cell[CellGroupData[{
+Cell[24798, 757, 723, 24, 29, "Input",ExpressionUUID->"a9daa566-ccd8-4fb3-a2bb-c357a090e4cb"],
+Cell[25524, 783, 531, 14, 65, "Output",ExpressionUUID->"a5c5e739-14cf-40b1-afe3-a3ecf98b00ff"]
+}, Open  ]]
+}
+]
+*)
+

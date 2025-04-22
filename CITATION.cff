@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Hope"
+  given-names: "Marius K."
+- family-names: "Lidal"
+  given-names: "Jonas"
+- family-names: "Massel"
+  given-names: "Francesco"
+title: "Data supporting arXiv-2504.01664"
+date-released: 2025-04-22
+url: "https://github.com/mariuskh/arXiv-2504.01664"
